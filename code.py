@@ -2,7 +2,7 @@ import random
 import os
 import time
 
-monsters=("Skeleton", "Zombie", "Spider", "Lava Cube")
+monsters=("Skeleton", "Zombie", "Spider", "Lava Cube","Wither")
 
 health = 100
 rounds = 0
