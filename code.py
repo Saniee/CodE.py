@@ -40,7 +40,7 @@ while True:
         print("commands: health")
         comm = input("--->")
         rounds = rounds+1
-        if comm=="health":
+        if comm=="healt":
             print("Your health:", health)
             time.sleep(3)
             os.system("cls")    
