@@ -7,6 +7,8 @@ monsters=("Skeleton", "Zombie", "Spider", "Lava Cube","Wither","Ghast","Blaze","
 health = 200
 rounds = 0
 
+com = "attack"
+
 rand = 1, 2
 
 os.system("title code.py")
