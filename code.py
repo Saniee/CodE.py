@@ -67,7 +67,7 @@ while True:
                 os.system("cls")
             elif he<50:
                 print("You have failed to kill a monster!")
-                a = random.randint(0, 100)
+                a = random.randint(0, 50)
                 b = random.randint(10, 50)
                 health = health-a
                 print("You have lost", a, "health!")
@@ -86,7 +86,7 @@ while True:
                 os.system("cls")
             elif he<50:
                 print("You failed to flee!")
-                a = random.randint(0, 100)
+                a = random.randint(0, 50)
                 health = health-a
                 print("You lost", a, "health!")
                 print("You have", health, "health lef!")
