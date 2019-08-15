@@ -4,7 +4,7 @@ import time
 
 monsters=("Skeleton", "Zombie", "Spider", "Lava Cube","Wither")
 
-health = 100
+health = 200
 rounds = 0
 
 rand = 1, 2
