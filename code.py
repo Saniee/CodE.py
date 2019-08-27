@@ -5,11 +5,12 @@ import time
 monsters=("Skeleton", "Zombie", "Spider", "Lava Cube","Wither","Ghast","Blaze","Witch","Slime","Creeper")
 
 health = 200
+coins = 100
 rounds = 0
 
-com = "attack"
+com = ""
 
-rand = 1, 2
+rand = 1, 2, 3
 
 os.system("title code.py")
 os.system("cls")
@@ -40,13 +41,15 @@ while True:
 
     if a==1:
         print("Type command:")
-        print("commands: health")
+        print("commands: health, coins")
         comm = input("--->")
         rounds = rounds+1
         if comm=="health":
             print("Your health:", health)
             time.sleep(3)
             os.system("cls")    
+        elif comm=="coins":
+            print("")
         elif comm=="":
             os.system("cls")
 
@@ -96,6 +99,14 @@ while True:
                 time.sleep(3)
                 os.system("cls")
     
+    if a==3:
+        os.system("clear")
+        print("Našiel si shop čo si chceš kúpiť?")
+        print("Heal Potion,(In Developmnet)")
+        shop = input("--->")
+        if shop=="Heal Potion":
+
+
     if com=="":
         os.system("cls")
         print("You died becouse you dont do anything :)")
