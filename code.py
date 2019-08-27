@@ -4,20 +4,24 @@ import time
 
 monsters=("Skeleton", "Zombie", "Spider", "Lava Cube","Wither","Ghast","Blaze","Witch","Slime","Creeper")
 
+tips=("Tip: You get coins only by attacking!", "Tip: If you flee it has higher chance to fail!", "Tip: If you have coins buy something at the shop it might be useful!")
+
 health = 200
 coins = 100
 rounds = 0
 
-com = ""
+com = "flee"
 
 rand = 1, 2, 3
+
+tip = random.choice(tips)
 
 os.system("title code.py")
 os.system("cls")
 print("Welcome to Code.py!")
+print(tip)
 print("This game is all about luck.")
 print("Good luck!")
-print("Please on the first input type the command or it will exit!")
 print("-")
 print("Hello whats your name?")
 meno = input("--->")
@@ -49,7 +53,9 @@ while True:
             time.sleep(3)
             os.system("cls")    
         elif comm=="coins":
-            print("")
+            print("You have:", coins,"coins.")
+            time.sleep(3)
+            os.system("cls")
         elif comm=="":
             os.system("cls")
 
@@ -66,7 +72,10 @@ while True:
             he = random.randint(0, 100)
             if he>50:
                 b = random.randint(10, 80)
+                c = random.randint(0, 60)
+                coins = coins+a
                 print("You have killed a monster with full health")
+                print("You got", c, "coins!")
                 print("-")
                 input("for continue press enter-->")
                 os.system("cls")
@@ -100,12 +109,31 @@ while True:
                 os.system("cls")
     
     if a==3:
-        os.system("clear")
+        os.system("cls")
         print("Našiel si shop čo si chceš kúpiť?")
-        print("Heal Potion,(In Developmnet)")
+        print("(Píš tak jak je to napísané!)")
+        print("Meno[Cena],")
+        print("HealPotion[100])")
         shop = input("--->")
-        if shop=="Heal Potion":
-
+        if shop=="HealPotion":
+            if coins<100:
+                print("You dont have enough coins!")
+                time.sleep(3)
+                os.system("cls")
+            elif coins>100:
+                coins = coins-100
+                health = health+50
+                print("You bought the Health Potion and gained 50 health!")
+                time.sleep(3)
+                os.system("cls")
+            elif coins==100:
+                coins = coins-100
+                health = health+50
+                print("You bought the Health Potion and gained 50 health!")
+                time.sleep(3)
+                os.system("cls")
+        elif shop=="":
+            os.system("cls")
 
     if com=="":
         os.system("cls")
