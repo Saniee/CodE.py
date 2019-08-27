@@ -4,7 +4,7 @@ import time
 
 monsters=("Skeleton", "Zombie", "Spider", "Lava Cube","Wither","Ghast","Blaze","Witch","Slime","Creeper")
 
-tips=("Tip: You get coins only by attacking!", "Tip: If you flee it has higher chance to fail!", "Tip: If you have coins buy something at the shop it might be useful!")
+tips=("Tip: You get coins only by attacking!", "Tip: If you flee it has higher chance to fail!", "Tip: If you have coins buy something at the shop it might be useful!", "Tip: You dont need to type a command to everything!")
 
 health = 200
 coins = 100
@@ -112,8 +112,8 @@ while True:
         os.system("cls")
         print("Našiel si shop čo si chceš kúpiť?")
         print("(Píš tak jak je to napísané!)")
-        print("Meno[Cena],")
-        print("HealPotion[100])")
+        print("(Meno[Cena])")
+        print("HealPotion[100],")
         shop = input("--->")
         if shop=="HealPotion":
             if coins<100:
