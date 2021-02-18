@@ -2,9 +2,9 @@ import random
 import os
 import time
 
-monsters=("Skeleton", "Zombie", "Spider", "Lava Cube","Wither","Ghast","Blaze","Witch","Slime","Creeper")
+monsters = ("Skeleton", "Zombie", "Spider", "Lava Cube","Wither","Ghast","Blaze","Witch","Slime","Creeper")
 
-tips=("Tip: You get coins only by attacking!", "Tip: If you flee it has higher chance to fail!", "Tip: If you have coins buy something at the shop it might be useful!", "Tip: You dont need to type a command to everything!")
+tips = ("Tip: You get coins only by attacking!", "Tip: If you flee it has higher chance to fail!", "Tip: If you have coins buy something at the shop it might be useful!", "Tip: You dont need to type a command to everything!")
 
 health = 200
 coins = 100
@@ -14,12 +14,10 @@ com = "flee"
 
 rand = 1, 2, 3
 
-tip = random.choice(tips)
-
 os.system("title code.py")
 os.system("cls")
 print("Welcome to Code.py!")
-print(tip)
+print(random.choice(tips))
 print("This game is all about luck.")
 print("Good luck!")
 print("-")
@@ -31,17 +29,12 @@ if meno=="Saniee":
     print("You gained 1000 health!")
     time.sleep(3)
     os.system("cls")
-elif meno<"Saniel":
+elif meno != "Saniel":
     print("Hello", meno)
     time.sleep(3)
     os.system("cls")
-elif meno>"Saniel":
-    print("Hello", meno)
-    time.sleep(3)
-    os.system("cls")
-
 while True:
-    a=random.choice(rand)
+    a = random.choice(rand)
 
     if a==1:
         print("Type command:")
