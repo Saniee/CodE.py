@@ -66,7 +66,7 @@ while True:
             if he>50:
                 b = random.randint(10, 80)
                 c = random.randint(0, 60)
-                coins = coins+a
+                coins = coins+c
                 print("You have killed a monster with full health")
                 print("You got", c, "coins!")
                 print("-")
